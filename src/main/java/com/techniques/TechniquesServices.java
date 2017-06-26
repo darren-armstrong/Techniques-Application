@@ -3,10 +3,10 @@ package com.techniques;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value="/firstDuplicate")
+@RequestMapping(value="/answer")
 public class TechniquesServices {
 	
-	@RequestMapping(value="/example", method = RequestMethod.GET)
+	@RequestMapping(value="/firstDuplicate", method = RequestMethod.GET)
 	public String firstDuplicateExample(){
 		return "This is an example of FirstDuplicate." +
 				"<br>" + 
