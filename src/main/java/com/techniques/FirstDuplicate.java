@@ -1,6 +1,6 @@
 package com.techniques;
 
-import java.util.HashMap;
+import java.util.HashSet;
 
 /*
  * Given an array a that contains only numbers in the range from 1 to a.length, 
@@ -16,20 +16,14 @@ import java.util.HashMap;
 
 public class FirstDuplicate {
 	public static int firstDuplicate(int[] a){
-		int firstDup = 0;
-		if(a == null || a.length == 0){
+		if(a == null || a.length == 0)
 			return -1;
-		}
-		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		HashSet<Integer> map = new HashSet<Integer>();
 		for (int index = 0; index < a.length; index++){
-			if(map.containsKey(a[index])){
-				if(firstDup >= index){
-					firstDup = index;
-				}else{
-					return a[index];
-				}
+			if(map.contains(a[index])){
+				return a[index];
 			}else{
-				map.put(a[index], index);
+				map.add(a[index]);
 			}
 		}
 		return -1;
