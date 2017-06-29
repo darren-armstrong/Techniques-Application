@@ -6,7 +6,7 @@ public class FirstNotRepeatingCharacter {
 
 	static char firstNotRepeatingCharacter(String s) {
 	    List<Character> map = new ArrayList<Character>();
-	    HashSet<Character> uniqueMap = new HashSet<Character>();  
+	    LinkedHashSet<Character> uniqueMap = new LinkedHashSet<Character>();  
 	    for(char l : s.toCharArray()){
 	        map.add(l);
 	        uniqueMap.add(l);
